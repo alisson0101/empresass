@@ -13,7 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-    return view('home');
+    return view('home', [
+    ]);
+
+
 });
 
 Route::get('/', 'App\Http\Controllers\HomeController@indexx')->name('home');
@@ -36,7 +39,7 @@ Route::get('/cadastro_empresas', function () {
 
 Route::get('/vagasemprego', function () {
     return view('vagasemprego');
-})->middleware('auth');
+});
 
 
 

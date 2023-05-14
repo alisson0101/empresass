@@ -9,6 +9,6 @@ class Empresa extends Model
 {
     use HasFactory;
     protected $fillable = ['cnpj','nome','endereco','email','senha', 'numero'];
-    protected $hidden = ['senha', 'remember_token'];
+    //protected $hidden = ['senha', 'remember_token'];
 
 }

@@ -24,7 +24,7 @@
     <div class="card" id="telaLogin">
   <!-- <img src="..." class="card-img-top" alt="..."> -->
   <div class="card-body">
-    <form action="{{ route('login') }} "method="POST">
+    <form action="{{ route('vagasemprego')}}"method="POST">
     {{ csrf_field() }}
 
       <h1></h1> 

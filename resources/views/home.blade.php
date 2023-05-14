@@ -24,14 +24,16 @@
         <li class="nav-item">
           <a class="nav-link" href="/login">Fazer Login</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/vagasemprego">Insira Vagas em sua empresa</a>
+        </li>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <li><a class="dropdown-item" href="#">Action</a></li>
           <li><a class="dropdown-item" href="#">Another action</a></li>
           <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item" href="#">Something else here</a></li>
         </ul>
-      </li>
-      
+      </li>    
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Pesquisar</button>
@@ -46,22 +48,20 @@
 
 <body id="">
 
-<h2>Vagas de empregos disponíveis</h2>
-@foreach ($empresas as $empresa)
+<h2>Vagas disponíveis</h2>
+@foreach ($vagas as $vaga)
 <div class="card" style="width: 18rem;">  
 <div class="card-body">
-    <h5 class="card-title">{{$empresa -> nome}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">CNPJ:{{$empresa -> cnpj}}</h6>
-    <p class="card-text">{{$empresa ->endereco }}</p>
+    <h5 class="card-title">{{$vaga -> cargo}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Renumeracão:{{$vaga -> renumeracao}}</h6>
+    <p class="card-text">Exigências{{$vaga ->exigencias }}</p>
+    <p class="card-text">Responsabilidades:{{$vaga ->responsa }}</p>
+    <p class="card-text">CNPJ:{{$vaga ->cnpj }}</p>
     <a href="#" class="card-link"></a>
     <a href="#" class="card-link">Candidatar</a>
   </div>
-  
 </div>
 @endforeach
-    
-
-
 </body>
 <footer></footer>
 </html>

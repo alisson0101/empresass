@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+        //
         Schema::create('empresas', function (Blueprint $table) {
             $table->string('cnpj')->primary();
             $table->string('nome');
@@ -27,6 +28,7 @@ return new class extends Migration
      */
     public function down(): void
     {
+        //
         Schema::dropIfExists('empresas');
     }
 };

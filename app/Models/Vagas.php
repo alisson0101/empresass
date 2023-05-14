@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Vagas extends Model
 {
     use HasFactory;
-    protected $fillable = ['cargo','renumeracao','exigencias','responsabilidades'];
+    protected $fillable = ['cargo','renumeracao','exigencias','responsa', 'cnpj'];
 }

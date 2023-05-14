@@ -18,7 +18,7 @@
       {{ csrf_field() }}
           <div class="form-header">
               <div class="title">
-                  <h1>VAGAS EMPREGO</h1>
+                  <h1>CADASTRE VAGAS EM SUA EMPRESA</h1>
               </div>
               <div class="login-button">
               <button type="submit">Enviar</button>
@@ -29,7 +29,7 @@
           <div class="input-group">
               <div class="input-box">
                   <label for="cargo">Cargo</label>
-                  <input id="cargo" type="text" name="cago" placeholder="" required>
+                  <input id="cargo" type="text" name="cargo" placeholder="" required>
               </div>
 
               <div class="input-box">
@@ -37,16 +37,25 @@
                   <input id="renumeracao" type="text" name="renumeracao" placeholder="" required>
               </div>
               <div class="input-box">
-                  <label for="resp">Responsabilidades</label>
-                  <input id="resp" type="text" name="resp" placeholder="" required>
+                  <label for="responsa">Responsabilidades</label>
+                  <input id="responsa" type="text" name="responsa" placeholder="" required>
               </div>
               <div class="input-box">
                 <label for="exigencias">Exigências</label>
                 <input id="exigencias" type="text" name="exigencias" placeholder="" required>
             </div>
+            <div class="input-box">
+                <label for="cnpj">Cnpj</label>
+                <input id="cnpj" type="text" name="cnpj" placeholder="" required>
+            </div>
           </div>
       </form>
   </div>
 </div>
+@if(session()->has('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
 </body>
 </html>

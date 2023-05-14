@@ -16,9 +16,13 @@ class VagasController extends Controller
         'cargo' => $request->cargo,
         'renumeracao' => $request->renumeracao,
         'exigencias' => $request->exigencias,
-        'responsabilidades' => $request->responsabilidades,
-
+        'responsa' => $request->responsa,
+        'cnpj' => $request->cnpj,   
         ]);
-return "cadastrado com sucesso!";
+        session()->flash('success','Vaga cadastrada com sucesso!');
+
+        return view('vagasemprego');
+        
         }
+        
 }

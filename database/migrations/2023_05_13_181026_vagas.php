@@ -12,21 +12,19 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('vagas', function (Blueprint $table) {
-            $table->id();
+        $table->id();
         $table->string('cargo');
         $table->string('renumeracao');
-        $table->text('exigencias');
-        $table->text('responsabilidades');
-        //$table->string('cnpj');
-       // $table->foreign('cnpj')->references('cnpj')->on('empresas');
+        $table->string('exigencias');
+        $table->string('responsa');
+        $table->string('cnpj');
+        $table->foreign('cnpj')->references('cnpj')->on('empresas')->onDelete('cascade');
         $table->timestamps();
-            });
+    });
     }
-    
     /**
      * Reverse the migrations.
      */
-    
     public function down(): void
     {
         Schema::dropIfExists('vagas');
