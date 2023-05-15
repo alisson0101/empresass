@@ -15,12 +15,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home', [
     ]);
-
-
 });
 
 Route::get('/', 'App\Http\Controllers\HomeController@indexx')->name('home');
-
 
 Route::get('/cadastro', 'App\Http\Controllers\CadastroController@create');
 Route::POST('/cadastro', 'App\Http\Controllers\CadastroController@store')->name('cadastro_empresas');
@@ -28,18 +25,19 @@ Route::POST('/cadastro', 'App\Http\Controllers\CadastroController@store')->name(
 Route::get('/vagasemprego', 'App\Http\Controllers\VagasController@gerarvagas');
 Route::POST('/vagasemprego', 'App\Http\Controllers\VagasController@store2')->name('vagasemprego');
 
-Route::get('/login', function () {
+/*Route::get('/login', function () {
     return view('login');
 })->name('login');
-
+*/
 Route::get('/cadastro_empresas', function () {
     return view('cadastro');
 })->name('login');
-//Route::post('/login', 'LoginController@login')->name('login');
 
-Route::get('/vagasemprego', function () {
-    return view('vagasemprego');
-});
 
+Route::get('/login', 'App\Http\Controllers\LoginController@showLoginForm');
+Route::post('/login', 'App\Http\Controllers\LoginController@login1');
+Route::get('/vagasemprego', 'App\Http\Controllers\LoginController@login1')->middleware('auth');
+
+Route::get('/filtrarvagas', 'App\Http\Controllers\FiltrarController@filtrar');
 
 

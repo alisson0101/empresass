@@ -17,9 +17,10 @@ class CadastroController extends Controller
         'endereco' => $request->endereco,
         'email' => $request->email,
         'numero' => $request->numero,
-        'senha' => $request->senha,
+        'password' => $request->password,
 
         ]);
-return view('home');
+return view('vagasemprego');
         }
+        
 }

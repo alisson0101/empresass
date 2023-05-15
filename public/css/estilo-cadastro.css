@@ -23,7 +23,7 @@ body {
 }
 
 .form-image {
-    width: 50%;
+    width: 10;
     display: flex;
     justify-content: center;
     align-items: center;

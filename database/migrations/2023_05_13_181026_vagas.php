@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('vagas', function (Blueprint $table) {
         $table->id();
         $table->string('cargo');
-        $table->string('renumeracao');
+        $table->float('renumeracao');
         $table->string('exigencias');
         $table->string('responsa');
         $table->string('cnpj');

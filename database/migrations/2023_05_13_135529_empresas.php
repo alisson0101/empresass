@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('endereco');
             $table->string('numero');
             $table->string('email');
-            $table->string('senha');
+            $table->string('password');
             $table->timestamps();
         });
     }

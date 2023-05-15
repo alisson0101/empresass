@@ -24,17 +24,17 @@
     <div class="card" id="telaLogin">
   <!-- <img src="..." class="card-img-top" alt="..."> -->
   <div class="card-body">
-    <form action="{{ route('vagasemprego')}}"method="POST">
+    <form action="/login"method="POST">
     {{ csrf_field() }}
 
       <h1></h1> 
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" aria-describedby="emailHelp"  placeholder="Digite seu email">
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp"  name ="email" placeholder="Digite seu email">
         
       <div class="mb-3">
-        <label for="senha" class="form-label">Password </label>
-        <input type="password" class="form-control" id="senha" placeholder="Insira sua senha">
+        <label for="password" class="form-label">Password </label>
+        <input type="password" name="password" class="form-control" id="password" placeholder="Insira sua senha">
       </div>
       <button type="submit" class="btn btn-success">Entrar</button>
       <a href="/cadastro">Cadastrar</a>

@@ -8,16 +8,19 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    public function login(Request $request)
-    {
-        $credentials = $request->only('email', 'senha');
-        
-        if (Auth::attempt($credentials)) {
-            return redirect()->intended('/vagasemprego');
-        }
-        
-        return redirect()->back()->withErrors(['email' => 'Credenciais inválidas']);
-    }
+    public function showLoginForm()
+{
+    return view('login');
+}
 
-   
+public function login1(Request $request)
+{
+    $credentials = $request->only('email', 'password');
+
+    if (Auth::attempt(['email' => $credentials['email'], 'password' => $credentials['password']])) {
+        return redirect()->intended('vagasemprego');
+    } else {
+        return redirect()->back()->withErrors(['message' => 'E-mail ou senha inválidos.']);
+    }
+    } 
 }

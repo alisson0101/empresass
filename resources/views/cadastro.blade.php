@@ -50,8 +50,8 @@
               </div>
 
               <div class="input-box">
-                  <label for="senha">Senha</label>
-                  <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+                  <label for="password">Senha</label>
+                  <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
               </div>
 
 
